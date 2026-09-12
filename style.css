@@ -245,3 +245,69 @@ input.error-border {
 .btn-submit .loader {
   display: none;
 }
+/* Password field wrapper */
+.password-wrapper {
+  position: relative;
+  width: 100%;
+  margin: 10px 0 18px;
+}
+
+/* Password input */
+.password-wrapper input {
+  width: 100%;
+  height: 64px;
+  padding: 16px 52px 16px 16px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Eye toggle button */
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+
+  color: #777;
+  cursor: pointer;
+
+  transition: color 0.2s ease;
+}
+
+/* Prevent global button hover from changing eye background */
+.password-toggle:hover {
+  background: transparent;
+  color: #222;
+}
+
+/* Keyboard accessibility */
+.password-toggle:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* Icon */
+.eye-icon {
+  display: block;
+  width: 22px;
+  height: 22px;
+  pointer-events: none;
+}
+
+/* Hide browser default password reveal icon */
+.password-wrapper input::-ms-reveal,
+.password-wrapper input::-ms-clear {
+  display: none;
+}
